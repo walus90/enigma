@@ -2,6 +2,7 @@ import flickrapi as fa
 import urllib
 import os
 import argparse
+import zad
 
 my_api_key = 'dd3d37bdbe27efaf9e3bfa87ce551484'
 my_secret = 'b94f7320cf655805'
@@ -9,7 +10,7 @@ my_secret = 'b94f7320cf655805'
 f = fa.FlickrAPI(my_api_key, my_secret, format='parsed-json')
 
 parser = argparse.ArgumentParser(description='Enter keyword and number of images')
-parser.add_argument('keyword', type=str, nargs='+',
+parser.add_argument('keyword', type=str,
                     help='keyword to seach')
 parser.add_argument('number', type=int,
                     help='number of photos')
